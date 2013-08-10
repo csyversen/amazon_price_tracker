@@ -1,4 +1,4 @@
-class CreateProductsUsers < ActiveRecord::Migration
+class ProductsUsers < ActiveRecord::Migration
   def change
     create_table :products_users, :id => false do |t|
       t.belongs_to :product
