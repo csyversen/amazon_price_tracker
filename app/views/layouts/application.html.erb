@@ -10,9 +10,8 @@
     <div class="navbar">
       <div class="container">
         <ul class="nav navbar-nav">
-          <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Login", root_path %></li>
+          <li class="<%= 'active' if current_page?(track_create_path) %>"><%= link_to "Login", {:controller => "track", :action => 'menu'} %></li>
           <li class="<%= 'active' if current_page?(track_menu_path) %>"><%= link_to("Products", {:controller => "track", :action => "menu"}) %></li>
-          <li class="<%= 'active' if current_page?(auth_logout_path) %>"><%= link_to("Logout", {:controller => "auth", :action => "logout"}) %></li>
         </ul>
       </div>
     </div>

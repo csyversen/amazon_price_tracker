@@ -4,10 +4,9 @@ require 'open-uri'
 
 class TrackController < ApplicationController
   
-  before_filter :authenticate_user!
   
   def menu
-    @products = User.find(session[:user_id]).products
+    #@products = User.find(session[:user_id]).products
   end
 
   def create
@@ -18,7 +17,7 @@ class TrackController < ApplicationController
     domain = PublicSuffix.parse(uri.host) 
 
     @product = Product.new(:url => url)
-    @product.users << User.find(session[:user_id])
+    #@product.users << User.find(session[:user_id])
     @product.sale_site = domain.domain
 
     doc = Nokogiri::HTML(open("#{url}"))
