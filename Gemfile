@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby "2.0.0"
 
+gem 'pg'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -49,5 +51,5 @@ gem 'capistrano', group: :development
 gem 'bootstrap-sass'
 gem 'public_suffix'
 gem 'nokogiri'
-gem 'devise'
+#gem 'devise'
 gem 'rails_12factor', group: :production
